@@ -13,6 +13,7 @@ import Home from './pages/home/home'
 import Cart from './pages/cart/cart'
 import Market from './pages/market/market'
 import Mine from './pages/mine/mine'
+import Hello from './components/hello'
 //配置路由
 const routes = [
 	{path:'/', component:Home},
@@ -27,9 +28,28 @@ var router = new VueRouter({
 	routes
 })
 /* eslint-disable no-new */
-new Vue({
+var vm = new Vue({
   el: '#app',
   template: '<App/>',
   components: { App },
-  router
+  router,
+  cartArr : [],
+  data : {
+  	cartArr : []
+  },
+  methods : {
+  	addGoods (goods) {
+  		cartArr.push()
+  	},
+  	getId () {
+  		return this.id
+  	}
+  }
 })
+
+Vue.prototype.addGoods = function (goods) {
+	this.cartArr.push(goods)
+},
+Vue.prototype.getGoods = function () {
+	return this.cartArr
+}

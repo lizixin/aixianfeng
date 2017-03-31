@@ -49,7 +49,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  
+  .view{
+  	margin-top: 1.444444rem;
+  	/*margin-bottom: 1.7rem;*/
+  	/*background: red;*/
+  }
   /*margin-top: 60px;*/
  	.tab_bar{
 		height: 1.5rem;
@@ -62,6 +66,7 @@ export default {
 		right: 0;
 		bottom: 0;
 		background: #f6f2ef;
+		z-index: 100;
 		a{
 			&:nth-of-type(1){
 				background: url('/static/imgs/home.png') no-repeat center 0.166666rem;

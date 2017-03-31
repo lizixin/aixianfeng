@@ -19,14 +19,20 @@
 				banner_list : []
 			}
 		},
+		methods : {
+			
+		},
 		created () {
-			this.$http.get('http://www.vrserver.applinzi.com/aixianfeng/apihome.php').then((res) => {
-				console.log(res.body.data.slide)
+			this.$http.get('/static/data/home.json').then((res) => {
+//				console.log(res.body.data.act_info[0].act_rows)
 				//将数据赋给data属性中的banner_list数组,用来在页面显示
-				this.banner_list = res.body.data.slide;
+				this.banner_list = res.body.data.act_info[0].act_rows
 			})
 		},
 		updated () {
+
+
+//			console.log(this.list)
 			 var mySwiper = new Swiper ('.swiper-container', {
 			    direction: 'horizontal',
 			    loop: true,

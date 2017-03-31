@@ -27,7 +27,7 @@
 		right: 0;
 		top: 0;
 		color: #261600;
-		
+		z-index: 100;
 		/*line-height: 1.444444rem;*/
 		img{
 			float: left;
